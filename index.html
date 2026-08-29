@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohit Suthar — Video Editor · Designer · Photographer</title>
+  <meta name="description"
+    content="Portfolio of Mohit Suthar — multi-disciplinary creative working across video editing, graphic design, and photography.">
+
+  <!-- ============================================================
+     FONTS
+     Display: Bricolage Grotesque · Body: Instrument Sans
+     Mono/HUD: Space Mono
+     ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Film-grain texture overlay, sits above everything, ignores pointer events -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom cursor (desktop only, hidden on touch via CSS/JS) -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+    <div class="cursor-dot"></div>
+  </div>
+
+  <!-- ============================================================
+     PRELOADER — styled as an old film-leader countdown (3-2-1)
+     ============================================================ -->
+  <div id="preloader" class="preloader" role="status" aria-label="Loading site">
+    <div class="preloader-inner">
+      <svg class="leader-circle" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="leader-track" cx="100" cy="100" r="90"></circle>
+        <line x1="100" y1="10" x2="100" y2="30"></line>
+        <line x1="100" y1="170" x2="100" y2="190"></line>
+        <line x1="10" y1="100" x2="30" y2="100"></line>
+        <line x1="170" y1="100" x2="190" y2="100"></line>
+        <circle class="leader-progress" cx="100" cy="100" r="90"></circle>
+      </svg>
+      <span class="leader-number" id="leaderNumber">3</span>
+      <span class="preloader-label">Mohit Suthar — SHOWREEL LOADING</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+      HUD OVERLAY — viewfinder corner brackets + rec/timecode
+      Purely decorative, mirrors the record-camera framing motif
+      ============================================================ -->
+  <div class="hud" aria-hidden="true">
+    <span class="hud-corner hud-corner--tl"></span>
+    <span class="hud-corner hud-corner--tr"></span>
+    <span class="hud-corner hud-corner--bl"></span>
+    <span class="hud-corner hud-corner--br"></span>
+    <div class="hud-rec">
+      <span class="rec-dot"></span>REC
+    </div>
+    <div class="hud-timecode" id="hudTimecode">00:00:00:00</div>
+  </div>
+
+  <!-- ============================================================
+     NAV
+     ============================================================ -->
+  <header class="nav" id="siteNav">
+    <a href="#hero" class="nav-logo" data-cursor="link">
+      <span class="nav-logo-mark">MS</span>
+      <span class="nav-logo-full">Mohit&nbsp;Suthar</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about" data-cursor="link"><span class="nav-idx">01</span>About</a>
+      <a href="#work" data-cursor="link"><span class="nav-idx">02</span>Work</a>
+      <a href="#services" data-cursor="link"><span class="nav-idx">03</span>Services</a>
+      <a href="#contact" data-cursor="link"><span class="nav-idx">04</span>Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--small btn--magnetic nav-cta" data-cursor="link">
+      <span>Start a project</span>
+    </a>
+
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile nav panel -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn--outline">Start a project</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============================================================
+       1. HERO
+       ============================================================ -->
+    <section class="hero" id="hero">
+
+      <!-- Showreel background placeholder.
+         SWAP: replace this <div class="hero-reel-placeholder"> block with:
+         <video class="hero-reel" autoplay muted loop playsinline poster="poster.jpg">
+           <source src="your-showreel.mp4" type="video/mp4">
+         </video>
+    -->
+      <div class="hero-reel-placeholder" aria-hidden="true">
+        <div class="hero-reel-sweep"></div>
+      </div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow reveal-up" data-mono>FRAME 001 — SHOWREEL 2026</p>
+
+        <h1 class="hero-title">
+          <span class="split-line" data-split>Mohit Suthar</span>
+        </h1>
+
+        <p class="hero-roles reveal-up" data-mono>
+          VIDEO&nbsp;EDITING&nbsp;— GRAPHIC&nbsp;DESIGN&nbsp;— PHOTOGRAPHY
+        </p>
+
+        <p class="hero-sub reveal-up">
+          I cut, compose, and frame stories for brands and artists — from
+          the timeline to the lens to the layout grid. Based in Los Angeles,
+          working worldwide.
+        </p>
+
+        <div class="hero-actions reveal-up">
+          <a href="#work" class="btn btn--primary btn--magnetic" data-cursor="link"><span>View the work</span></a>
+          <a href="#contact" class="btn btn--ghost btn--magnetic" data-cursor="link"><span>Start a project</span></a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span></span>
+        <p data-mono>SCROLL</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       2. ABOUT
+       ============================================================ -->
+    <section class="about" id="about">
+      <div class="section-head">
+        <p class="eyebrow" data-mono>02 / ABOUT</p>
+        <h2 class="section-title" data-split-words>The person behind the timeline.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal-up">
+          <!-- PLACEHOLDER BIO — swap with your real bio -->
+          <p class="about-lede">
+            I'm Mohit — a multi-disciplinary creative who's spent the last
+            eight years moving between the edit bay, the design grid, and
+            the viewfinder. I like projects that don't sit still in one
+            medium, because most good stories don't either.
+          </p>
+          <p>
+            My work usually starts with a client's raw footage, a rough
+            brand idea, or a blank memory card, and ends with something
+            that feels considered, frame by frame. I've cut brand films
+            for independent labels, built identity systems for small
+            studios, and shot events, portraits, and products in between
+            set-ups. The throughline is pacing — knowing when to hold a
+            shot, when to cut, and when to leave white space.
+          </p>
+          <blockquote class="about-philosophy">
+            "Good editing is invisible. Good design is inevitable.
+            Good photography just waits for the right second."
+          </blockquote>
+        </div>
+
+        <div class="about-tools reveal-up">
+          <p class="about-tools-label" data-mono>TOOLKIT / GEAR</p>
+          <ul class="tools-grid" id="toolsGrid">
+            <li class="tool-card"><span class="tool-mark" data-mono>f/1.4</span><span class="tool-name">Adobe
+                Premiere&nbsp;Pro</span></li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/2.0</span><span
+                class="tool-name">DaVinci&nbsp;Resolve</span></li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/2.8</span><span
+                class="tool-name">After&nbsp;Effects</span></li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/4.0</span><span class="tool-name">Photoshop</span>
+            </li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/5.6</span><span
+                class="tool-name">Illustrator</span></li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/8.0</span><span
+                class="tool-name">Lightroom&nbsp;Classic</span></li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/11</span><span
+                class="tool-name">Sony&nbsp;A7S&nbsp;III</span></li>
+            <li class="tool-card"><span class="tool-mark" data-mono>f/16</span><span
+                class="tool-name">24–70mm&nbsp;/&nbsp;85mm&nbsp;primes</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       3. WORK / PORTFOLIO
+       ============================================================ -->
+    <section class="work" id="work">
+      <div class="section-head">
+        <p class="eyebrow" data-mono>03 / SELECTED WORK</p>
+        <h2 class="section-title" data-split-words>Recent frames, cuts &amp; layouts.</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-bar reveal-up" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true"
+          data-cursor="link">All</button>
+        <button class="filter-btn" data-filter="video" role="tab" aria-selected="false"
+          data-cursor="link">Video</button>
+        <button class="filter-btn" data-filter="design" role="tab" aria-selected="false"
+          data-cursor="link">Design</button>
+        <button class="filter-btn" data-filter="photo" role="tab" aria-selected="false"
+          data-cursor="link">Photography</button>
+        <span class="filter-count" id="filterCount" data-mono></span>
+      </div>
+
+      <!-- Supplementary horizontal-scroll "filmstrip" — decorative highlight reel,
+         separate from the main grid below so it never blocks navigation -->
+      <div class="filmstrip-wrap reveal-up" aria-label="Featured frames, scroll horizontally">
+        <p class="filmstrip-label" data-mono>FEATURED FRAMES →</p>
+        <div class="filmstrip" id="filmstrip">
+          <!-- repeated sprocket-strip cells, purely visual -->
+        </div>
+      </div>
+
+      <!-- Main project grid — populated by JS from the PROJECTS array in main.js -->
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <!-- ============================================================
+       4. SKILLS / SERVICES
+       ============================================================ -->
+    <section class="services" id="services">
+      <div class="section-head">
+        <p class="eyebrow" data-mono>04 / SERVICES</p>
+        <h2 class="section-title" data-split-words>What I bring to a project.</h2>
+      </div>
+
+      <div class="services-list" id="servicesList">
+        <!-- rows populated by JS -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+       5. CONTACT
+       ============================================================ -->
+    <section class="contact" id="contact">
+      <div class="section-head">
+        <p class="eyebrow" data-mono>05 / CONTACT</p>
+        <h2 class="section-title" data-split-words>Let's cut something together.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <p class="contact-lede">
+            Have a brief, a rough cut, or just an idea? Tell me about it —
+            I reply within a couple of days.
+          </p>
+
+          <ul class="contact-links">
+            <!-- SWAP: real email -->
+            <li><a href="mailto:mohitsuthar2408@gmail.com" data-cursor="link" data-mono>mohitsuthar2408@gmail.com</a>
+            </li>
+          </ul>
+
+          <ul class="social-links">
+            <!-- SWAP: real social URLs -->
+            <li><a href="https://www.instagram.com/mohit_suthar24?igsh=YXp1dTB4eGxteGRm" target="_blank" rel="noopener" data-cursor="link">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/mohit-suthar-b5566838a/" target="_blank" rel="noopener" data-cursor="link">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/mohitsuthar10" target="_blank" rel="noopener" data-cursor="link">Behance</a></li>
+            <li><a href="https://x.com/mohit_suthar24" target="_blank" rel="noopener" data-cursor="link">X/Twitter</a></li>
+          </ul>
+
+          <!-- SWAP: replace href with your real Calendly (or similar) link -->
+          <a href="https://calendly.com/your-link" target="_blank" rel="noopener"
+            class="btn btn--outline btn--magnetic contact-book" data-cursor="link">
+            <span>Book a discovery call</span>
+          </a>
+        </div>
+
+        <!-- ============================================================
+           CONTACT FORM — wired for Formspree.
+           SWAP: replace FORM_ENDPOINT in js/main.js with your real
+           Formspree endpoint, e.g. https://formspree.io/f/xxxxxxxx
+           The form is submitted via fetch() from ONE constant, so
+           pointing it at a different backend later is a one-line change.
+           ============================================================ -->
+        <form class="contact-form reveal-up" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <!-- Honeypot field — hidden from real users, catches simple bots -->
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--magnetic form-submit" data-cursor="link">
+            <span class="btn-label-default">Send message</span>
+            <span class="btn-label-sending">Sending…</span>
+          </button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <p class="footer-wordmark">Mohit Suthar</p>
+      <a href="#top" class="btn btn--small btn--outline btn--magnetic" data-cursor="link"><span>Back to top ↑</span></a>
+    </div>
+
+    <div class="footer-grid">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <ul class="footer-social">
+        <li><a href="https://www.instagram.com/mohit_suthar24?igsh=YXp1dTB4eGxteGRm" target="_blank" rel="noopener">IG</a></li>
+        <li><a href="https://www.linkedin.com/in/mohit-suthar-b5566838a/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.behance.net/mohitsuthar10" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="https://x.com/mohit_suthar24" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-copy" data-mono>© <span id="footerYear"></span> Mohit Suthar. All rights reserved.</p>
+  </footer>
+
+  <!-- ============================================================
+     LIGHTBOX / PROJECT MODAL
+     Used for photography full-screen viewing (with prev/next) and
+     for the expanded write-up on video & design projects.
+     ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project detail" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" data-lightbox-close aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous project">←</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next project">→</button>
+
+      <div class="lightbox-media" id="lightboxMedia" aria-hidden="true"></div>
+
+      <div class="lightbox-info">
+        <p class="lightbox-category" id="lightboxCategory" data-mono></p>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+        <dl class="lightbox-meta" id="lightboxMeta"></dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     SCRIPTS
+     GSAP + ScrollTrigger via CDN (only external libs besides Formspree)
+     ============================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+
+</html>
