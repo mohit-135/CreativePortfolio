@@ -1,90 +1,99 @@
-# Jordan Reyes — Portfolio Site
+# Mohit Suthar — Portfolio Site
 
 Plain HTML/CSS/JS + GSAP (ScrollTrigger) via CDN. No build step — open
-`index.html` in a browser, or serve the folder with any static host
-(Netlify, Vercel, GitHub Pages, S3, etc).
+`index.html` in a browser, or serve the folder with any static host.
 
-## Design concept
-The site is built around the subject: everything borrows from camera
-and edit-suite language — viewfinder corner brackets, a live "REC"
-indicator, a scroll-driven timecode readout, a film-leader 3-2-1
-countdown preloader, and a contact-sheet/filmstrip motif in the Work
-section. Accent color `#FF3B2F` is the "tally light" red you'd see on
-a recording camera.
+## What changed in this pass
+
+**About section**
+- Added a photo slot (`about-photo-frame`) to the left of the bio. It
+  currently shows a styled placeholder. To use a real photo:
+  1. Drop your photo in an `img/` folder next to `index.html`.
+  2. In `index.html`, find the `about-photo-frame` block and set the
+     `<img>` tag's `src` (and a real `alt`), then remove its `hidden`
+     attribute. You can also delete the `about-photo-fill` div once
+     the real image is in place.
+
+**Work section — fully restructured**
+"Design" has been removed from the portfolio entirely. Work now splits
+into two toggleable disciplines, each with its own sub-tabs:
+
+```
+Video Editing              Photography
+ ├─ Edits                   ├─ Photography (general portfolio)
+ └─ Color Grading           ├─ Event Photography (grouped by event)
+                             └─ Photo Editing (before/after slider)
+```
+
+- **Video grids** use a CSS masonry (multi-column) layout so
+  horizontal (16:9) and vertical (9:16) clips both sit naturally
+  without gaps or forced cropping. Each card shows a duration badge
+  and opens a lightbox with title, client, role, tools, and duration —
+  the lightbox's prev/next only cycles through whichever sub-tab
+  (Edits or Color Grading) is currently open.
+- **Photography** uses the same masonry approach with
+  landscape/portrait/square variants.
+- **Event Photography** groups photos under named event headers
+  (placeholder events: Independence Day Celebration, Annual Club
+  Meet, College Cultural Fest) — each with its own date and its own
+  masonry grid. The lightbox's prev/next stays scoped to the event
+  you clicked into.
+- **Photo Editing** shows before/after pairs as a draggable
+  comparison slider (a native `<input type="range">` drives a CSS
+  clip-path, so it's fully keyboard- and screen-reader-accessible,
+  not just mouse/touch).
 
 ## Where to plug in your real content
 
-**1. Copy & bio** — `index.html`
-Every placeholder paragraph (hero subhead, About bio/philosophy) is
-plain text in `index.html` — search for `PLACEHOLDER BIO` in the About
-section and edit directly.
+**1. Photo (About)** — see above.
 
-**2. Projects** — `js/main.js`, top of the file, `PROJECTS` array.
-Each project is one object:
+**2. All Work content** — `main.js`, top of the file, the `WORK` object.
+Everything in the Work section renders from this one object:
 ```js
-{
-  id: "p01", category: "video", // "video" | "design" | "photo"
-  tag: "Video", title: "...", client: "...", role: "...",
-  tools: "...", year: "2025", desc: "...",
-  fill: "linear-gradient(...)" // swap for a real image, see below
+var WORK = {
+  video: {
+    edits: [ { id, title, client, role, tools, year, duration, orientation, desc, fill } ],
+    color: [ ... same shape ... ]
+  },
+  photo: {
+    photography: [ { id, title, client/role, tools, year, orientation, desc, fill } ],
+    event: {
+      "Event Name": { date: "DD Mon YYYY", items: [ { id, title, role, tools, orientation, desc, fill } ] }
+    },
+    editing: [ { id, title, tools, year, desc, beforeFill, afterFill } ]
+  }
 }
 ```
-Add, remove, or reorder objects freely — the grid, filter tabs,
-filmstrip, and lightbox all render from this one array.
+- `orientation` for video is `"horizontal"` or `"vertical"`.
+- `orientation` for photos is `"landscape"`, `"portrait"`, or `"square"`.
+- Add, remove, rename, or reorder items/events freely — the grids,
+  sub-tabs, event headers, lightbox, and comparison sliders all read
+  straight from this object.
 
-**To use real images/video instead of gradient placeholders:**
-- Replace the `fill` property with an image path, e.g. `image: "img/project-01.jpg"`.
-- In `renderProjectGrid()` and the lightbox `populate()` function
-  (both in `js/main.js`), swap the `style="background:..."` divs for
-  an `<img loading="lazy" src="...">` (grid) and a full `<img>`/`<video>`
-  (lightbox). For video thumbnails, add a `<video muted loop playsinline>`
-  and trigger `.play()`/`.pause()` on `mouseenter`/`mouseleave` for the
-  "hover to autoplay" effect described in the brief.
+**To use real photos/videos instead of gradient placeholders:**
+- Replace `fill` (or `beforeFill`/`afterFill`) with an image path,
+  e.g. `image: "img/edit-01.jpg"`.
+- In `main.js`, swap the `style="background:..."` divs in
+  `videoCardHTML()`, `photoCardHTML()`, and `renderEditingCompare()`
+  for `<img loading="lazy" src="...">` (grid thumbnails) — and do the
+  same in the lightbox's `populate()` function for the enlarged view.
+  For video thumbnails, use a muted `<video loop playsinline>` and
+  trigger `.play()`/`.pause()` on hover for a live preview.
 
-**3. Hero showreel** — `index.html`, Hero section.
-Find the comment `Showreel background placeholder` and replace the
-`.hero-reel-placeholder` div with:
-```html
-<video class="hero-reel" autoplay muted loop playsinline poster="poster.jpg">
-  <source src="your-showreel.mp4" type="video/mp4">
-</video>
-```
-Add `.hero-reel { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }`
-to `style.css`. Keep the file compressed/short (5–10s loop) for fast load.
-
-**4. Formspree endpoint** — `js/main.js`, search for `FORM_ENDPOINT`
-```js
-var FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // <-- put your real endpoint here
-```
-That's the only line to change. The form already posts via `fetch()`
-with `FormData`, so pointing it at a different backend later is a
-one-line swap — just make sure the new endpoint accepts the same
-`name` / `email` / `message` fields (and returns a non-2xx status on
-failure, which the existing error-handling already checks for).
-
-**5. Social links & email** — `index.html`
-Search for `SWAP: real email` (Contact section) and `SWAP: real social
-URLs` (Contact + Footer) and update the `href` values.
-
-**6. Calendly link** — `index.html`, Contact section
-Search for `SWAP: replace href with your real Calendly` and update
-the "Book a discovery call" button's `href`.
+**3. Everything else** (hero showreel, Formspree endpoint, socials,
+Calendly link, footer) is unchanged from the previous build — search
+`index.html`/`main.js` for the `SWAP:` comments.
 
 ## Notes on the build
 - **Fonts:** Bricolage Grotesque (display), Instrument Sans (body),
   Space Mono (timecodes/labels), loaded from Google Fonts.
-- **Animation library:** GSAP + ScrollTrigger only, loaded via CDN in
-  `index.html`. Everything else is vanilla JS in `js/main.js`.
-- **Performance:** no real media is bundled (all placeholders are CSS
-  gradients), so swap in compressed, appropriately-sized images
-  (WebP/AVIF where possible) and add `loading="lazy"` to any `<img>`
-  you add outside the hero.
-- **Accessibility:** honors `prefers-reduced-motion` (skips
-  text-splitting/scroll animation, shows content in its final state
-  instantly), keyboard-navigable filter tabs and lightbox (Esc to
-  close, arrow keys to navigate), visible focus states, and a
-  honeypot field on the form instead of a CAPTCHA.
-- **Horizontal scroll:** used only for the small supplementary
-  "Featured Frames" filmstrip in the Work section — the main project
-  grid stays a normal responsive grid for usability, per the brief's
-  "don't force it" guidance.
+- **Animation library:** GSAP + ScrollTrigger only, via CDN. Everything
+  else is vanilla JS in `main.js`.
+- **Accessibility:** honors `prefers-reduced-motion`; the discipline
+  toggle, sub-tabs, and lightbox are keyboard-operable (Tab/Enter,
+  Esc to close, arrow keys to navigate); the before/after sliders are
+  real range inputs, so they work with a keyboard or screen reader
+  out of the box.
+- **Masonry grids** use CSS `columns` rather than a JS masonry
+  library — this keeps things dependency-free and handles the mixed
+  horizontal/vertical media requirement without extra code.

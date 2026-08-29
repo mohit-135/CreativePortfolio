@@ -9,10 +9,10 @@
     content="Portfolio of Mohit Suthar — multi-disciplinary creative working across video editing, graphic design, and photography.">
 
   <!-- ============================================================
-     FONTS
-     Display: Bricolage Grotesque · Body: Instrument Sans
-     Mono/HUD: Space Mono
-     ============================================================ -->
+      FONTS
+      Display: Bricolage Grotesque · Body: Instrument Sans
+      Mono/HUD: Space Mono
+      ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -34,8 +34,8 @@
   </div>
 
   <!-- ============================================================
-     PRELOADER — styled as an old film-leader countdown (3-2-1)
-     ============================================================ -->
+      PRELOADER — styled as an old film-leader countdown (3-2-1)
+      ============================================================ -->
   <div id="preloader" class="preloader" role="status" aria-label="Loading site">
     <div class="preloader-inner">
       <svg class="leader-circle" viewBox="0 0 200 200" aria-hidden="true">
@@ -67,8 +67,8 @@
   </div>
 
   <!-- ============================================================
-     NAV
-     ============================================================ -->
+      NAV
+      ============================================================ -->
   <header class="nav" id="siteNav">
     <a href="#hero" class="nav-logo" data-cursor="link">
       <span class="nav-logo-mark">MS</span>
@@ -103,23 +103,20 @@
   <main id="top">
 
     <!-- ============================================================
-       1. HERO
-       ============================================================ -->
+        1. HERO
+        ============================================================ -->
     <section class="hero" id="hero">
 
       <!-- Showreel background placeholder.
-         SWAP: replace this <div class="hero-reel-placeholder"> block with:
-         <video class="hero-reel" autoplay muted loop playsinline poster="poster.jpg">
-           <source src="your-showreel.mp4" type="video/mp4">
-         </video>
+          SWAP: replace this <div class="hero-reel-placeholder"> block with:
+          <video class="hero-reel" autoplay muted loop playsinline poster="poster.jpg">
+            <source src="your-showreel.mp4" type="video/mp4">
+          </video>
     -->
       <div class="hero-reel-placeholder" aria-hidden="true">
         <div class="hero-reel-sweep"></div>
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
-      <!-- <video class="hero-reel" autoplay muted loop playsinline poster="poster.jpg">
-           <source src="projects/your-showreel.mp4" type="video/mp4">
-         </video> -->
 
       <div class="hero-content">
         <p class="eyebrow reveal-up" data-mono>FRAME 001 — SHOWREEL 2026</p>
@@ -151,8 +148,8 @@
     </section>
 
     <!-- ============================================================
-       2. ABOUT
-       ============================================================ -->
+        2. ABOUT
+        ============================================================ -->
     <section class="about" id="about">
       <div class="section-head">
         <p class="eyebrow" data-mono>02 / ABOUT</p>
@@ -186,22 +183,43 @@
         <div class="about-tools reveal-up">
           <p class="about-tools-label" data-mono>TOOLKIT / GEAR</p>
           <ul class="tools-grid" id="toolsGrid">
-            <li class="tool-card"><span class="tool-mark" data-mono>f/1.4</span><span class="tool-name">Adobe
-                Premiere&nbsp;Pro</span></li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/2.0</span><span
-                class="tool-name">DaVinci&nbsp;Resolve</span></li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/2.8</span><span
-                class="tool-name">After&nbsp;Effects</span></li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/4.0</span><span class="tool-name">Photoshop</span>
+            <li class="tool-card">
+              <span class="tool-mark" data-mono>f/1.4</span>
+              <span class="tool-name">Adobe Premiere&nbsp;Pro</span>
             </li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/5.6</span><span
-                class="tool-name">Illustrator</span></li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/8.0</span><span
-                class="tool-name">Lightroom&nbsp;Classic</span></li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/11</span><span
-                class="tool-name">Sony&nbsp;A7S&nbsp;III</span></li>
-            <li class="tool-card"><span class="tool-mark" data-mono>f/16</span><span
-                class="tool-name">24–70mm&nbsp;/&nbsp;85mm&nbsp;primes</span></li>
+            <li class="tool-card">
+              <span class="tool-mark" data-mono>f/2.0</span>
+              <span class="tool-name">DaVinci&nbsp;Resolve</span>
+              </li>
+            <!-- <li class="tool-card">
+              <span class="tool-mark" data-mono>f/2.8</span>
+              <span
+                class="tool-name">After&nbsp;Effects</span>
+              </li> -->
+            <li class="tool-card">
+              <span class="tool-mark" data-mono>f/4.0</span>
+              <span class="tool-name">Photoshop</span>
+            </li>
+            <!-- <li class="tool-card">
+              <span class="tool-mark" data-mono>f/5.6</span>
+              <span
+                class="tool-name">Illustrator</span>
+              </li> -->
+            <li class="tool-card">
+              <span class="tool-mark" data-mono>f/8.0</span>
+              <span
+                class="tool-name">Lightroom&nbsp;Classic</span>
+              </li>
+            <!-- <li class="tool-card">
+              <span class="tool-mark" data-mono>f/11</span>
+              <span
+                class="tool-name">Camera&nbsp;handling&nbsp;</span>
+              </li>
+            <li class="tool-card">
+              <span class="tool-mark" data-mono>f/16</span>
+              <span
+                class="tool-name">24–70mm&nbsp;/&nbsp;85mm&nbsp;primes</span>
+              </li> -->
           </ul>
         </div>
       </div>
@@ -209,24 +227,13 @@
 
     <!-- ============================================================
        3. WORK / PORTFOLIO
+       Two toggleable disciplines: Video Editing / Photography.
+       Each has its own sub-tabs — see js/main.js WORK data object.
        ============================================================ -->
     <section class="work" id="work">
       <div class="section-head">
         <p class="eyebrow" data-mono>03 / SELECTED WORK</p>
         <h2 class="section-title" data-split-words>Recent frames, cuts &amp; layouts.</h2>
-      </div>
-
-      <!-- Filter tabs -->
-      <div class="filter-bar reveal-up" role="tablist" aria-label="Filter projects by category">
-        <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true"
-          data-cursor="link">All</button>
-        <button class="filter-btn" data-filter="video" role="tab" aria-selected="false"
-          data-cursor="link">Video</button>
-        <button class="filter-btn" data-filter="design" role="tab" aria-selected="false"
-          data-cursor="link">Design</button>
-        <button class="filter-btn" data-filter="photo" role="tab" aria-selected="false"
-          data-cursor="link">Photography</button>
-        <span class="filter-count" id="filterCount" data-mono></span>
       </div>
 
       <!-- Supplementary horizontal-scroll "filmstrip" — decorative highlight reel,
@@ -238,8 +245,40 @@
         </div>
       </div>
 
-      <!-- Main project grid — populated by JS from the PROJECTS array in main.js -->
-      <div class="project-grid" id="projectGrid"></div>
+      <!-- Discipline toggle: Video Editing / Photography -->
+      <div class="work-mode-toggle reveal-up" role="tablist" aria-label="Choose discipline" id="workModeToggle">
+        <span class="work-mode-indicator" id="workModeIndicator" aria-hidden="true"></span>
+        <button class="work-mode-btn is-active" data-mode="video" role="tab" aria-selected="true"
+          data-cursor="link">Video&nbsp;Editing</button>
+        <button class="work-mode-btn" data-mode="photo" role="tab" aria-selected="false"
+          data-cursor="link">Photography</button>
+      </div>
+
+      <!-- ===== VIDEO EDITING PANEL ===== -->
+      <div class="work-panel" id="panelVideo" data-panel="video">
+        <div class="subtab-bar reveal-up" role="tablist" aria-label="Video category">
+          <button class="tab-btn is-active" data-subtab="edits" role="tab" aria-selected="true"
+            data-cursor="link">Edits</button>
+          <button class="tab-btn" data-subtab="color" role="tab" aria-selected="false"
+            data-cursor="link">Color&nbsp;Grading</button>
+          <span class="filter-count" id="videoCount" data-mono></span>
+        </div>
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+
+      <!-- ===== PHOTOGRAPHY PANEL ===== -->
+      <div class="work-panel" id="panelPhoto" data-panel="photo" hidden>
+        <div class="subtab-bar reveal-up" role="tablist" aria-label="Photography category">
+          <button class="tab-btn is-active" data-subtab="photography" role="tab" aria-selected="true"
+            data-cursor="link">Photography</button>
+          <button class="tab-btn" data-subtab="event" role="tab" aria-selected="false"
+            data-cursor="link">Event&nbsp;Photography</button>
+          <button class="tab-btn" data-subtab="editing" role="tab" aria-selected="false"
+            data-cursor="link">Photo&nbsp;Editing</button>
+          <span class="filter-count" id="photoCount" data-mono></span>
+        </div>
+        <div id="photoPanelBody"></div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -280,10 +319,14 @@
 
           <ul class="social-links">
             <!-- SWAP: real social URLs -->
-            <li><a href="https://www.instagram.com/mohit_suthar24?igsh=YXp1dTB4eGxteGRm" target="_blank" rel="noopener" data-cursor="link">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/mohit-suthar-b5566838a/" target="_blank" rel="noopener" data-cursor="link">LinkedIn</a></li>
-            <li><a href="https://www.behance.net/mohitsuthar10" target="_blank" rel="noopener" data-cursor="link">Behance</a></li>
-            <li><a href="https://x.com/mohit_suthar24" target="_blank" rel="noopener" data-cursor="link">X/Twitter</a></li>
+            <li><a href="https://www.instagram.com/mohit_suthar24?igsh=YXp1dTB4eGxteGRm" target="_blank" rel="noopener"
+                data-cursor="link">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/mohit-suthar-b5566838a/" target="_blank" rel="noopener"
+                data-cursor="link">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/mohitsuthar10" target="_blank" rel="noopener"
+                data-cursor="link">Behance</a></li>
+            <li><a href="https://x.com/mohit_suthar24" target="_blank" rel="noopener" data-cursor="link">X/Twitter</a>
+            </li>
           </ul>
 
           <!-- SWAP: replace href with your real Calendly (or similar) link -->
@@ -350,8 +393,10 @@
       </nav>
 
       <ul class="footer-social">
-        <li><a href="https://www.instagram.com/mohit_suthar24?igsh=YXp1dTB4eGxteGRm" target="_blank" rel="noopener">IG</a></li>
-        <li><a href="https://www.linkedin.com/in/mohit-suthar-b5566838a/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/mohit_suthar24?igsh=YXp1dTB4eGxteGRm" target="_blank"
+            rel="noopener">IG</a></li>
+        <li><a href="https://www.linkedin.com/in/mohit-suthar-b5566838a/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
         <li><a href="https://www.behance.net/mohitsuthar10" target="_blank" rel="noopener">Behance</a></li>
         <li><a href="https://x.com/mohit_suthar24" target="_blank" rel="noopener">X</a></li>
       </ul>

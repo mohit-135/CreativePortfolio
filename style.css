@@ -208,7 +208,7 @@ main > section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 200;
   pointer-events: none;
 }
 @media not all and (hover: hover) and (pointer: fine) {
@@ -628,13 +628,6 @@ main > section {
   background: radial-gradient(120% 90% at 15% 15%, #1c1315 0%, var(--bg) 55%);
   overflow: hidden;
 }
-.hero-reel {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .hero-reel-sweep {
   position: absolute;
   inset: -20%;
@@ -826,16 +819,16 @@ main > section {
 }
 
 /* =================================================================
-   WORK / FILTER BAR
+   WORK — mode toggle + sub-tabs
    ================================================================= */
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
+.filter-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--ink-faint);
 }
-.filter-btn {
+
+/* Reusable pill-tab look, shared by sub-tabs */
+.tab-btn {
   padding: 9px 18px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -843,24 +836,71 @@ main > section {
   color: var(--ink-dim);
   transition: all var(--dur-fast) var(--ease);
 }
-.filter-btn:hover {
+.tab-btn:hover {
   color: var(--ink);
   border-color: var(--ink-dim);
 }
-.filter-btn.is-active {
+.tab-btn.is-active {
   background: var(--ink);
   color: var(--bg);
   border-color: var(--ink);
 }
-.filter-count {
-  margin-left: auto;
-  font-size: 12px;
-  color: var(--ink-faint);
+
+.subtab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+/* Discipline toggle — Video Editing / Photography, sliding pill indicator */
+.work-mode-toggle {
+  position: relative;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-alt);
+}
+.work-mode-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  transition:
+    transform 0.4s var(--ease),
+    width 0.4s var(--ease);
+  z-index: 0;
+}
+.work-mode-btn {
+  position: relative;
+  z-index: 1;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink-dim);
+  transition: color var(--dur-fast) var(--ease);
+  white-space: nowrap;
+}
+.work-mode-btn.is-active {
+  color: #12080a;
+}
+
+.work-panel[hidden] {
+  display: none;
 }
 
 /* Filmstrip — decorative horizontal-scroll highlight reel */
 .filmstrip-wrap {
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 .filmstrip-label {
   font-size: 11px;
@@ -925,37 +965,71 @@ main > section {
   color: rgba(245, 243, 239, 0.85);
 }
 
-/* Project grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+/* =================================================================
+   MASONRY GRIDS — shared by Video and Photography panels.
+   CSS multi-column layout handles mixed horizontal/vertical media
+   far better than a fixed grid: each card keeps its own aspect
+   ratio and the columns settle around it, like a real contact sheet.
+   ================================================================= */
+.video-grid,
+.photo-grid {
+  columns: 1;
+  column-gap: 20px;
 }
 @media (min-width: 700px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .video-grid,
+  .photo-grid {
+    columns: 2;
   }
 }
 @media (min-width: 1100px) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+  .video-grid,
+  .photo-grid {
+    columns: 3;
+    column-gap: 24px;
   }
 }
 
 .project-card {
   position: relative;
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 20px;
   border-radius: var(--radius-m);
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--bg-alt);
   cursor: none;
 }
+@media (min-width: 1100px) {
+  .project-card {
+    margin-bottom: 24px;
+  }
+}
+
 .project-card-media {
   position: relative;
-  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
+/* Orientation variants — set per item so mixed horizontal/vertical
+   media (and photo shapes) sit naturally in the masonry columns */
+.project-card-media.is-horizontal {
+  aspect-ratio: 16 / 9;
+}
+.project-card-media.is-vertical {
+  aspect-ratio: 9 / 16;
+}
+.project-card-media.is-landscape {
+  aspect-ratio: 4 / 3;
+}
+.project-card-media.is-portrait {
+  aspect-ratio: 3 / 4;
+}
+.project-card-media.is-square {
+  aspect-ratio: 1 / 1;
+}
+
 .project-card-fill {
   position: absolute;
   inset: 0;
@@ -988,6 +1062,49 @@ main > section {
   font-family: var(--font-mono);
   font-size: 10px;
   color: rgba(245, 243, 239, 0.6);
+}
+
+/* Duration badge + play glyph, video cards only */
+.project-card-duration {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  padding: 4px 9px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  background: rgba(11, 12, 14, 0.55);
+  border: 1px solid rgba(245, 243, 239, 0.15);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+.project-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(11, 12, 14, 0.5);
+  border: 1px solid rgba(245, 243, 239, 0.25);
+  backdrop-filter: blur(4px);
+  opacity: 0.85;
+  transition:
+    opacity var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+.project-card-play::after {
+  content: "";
+  border-style: solid;
+  border-width: 7px 0 7px 11px;
+  border-color: transparent transparent transparent var(--ink);
+  margin-left: 3px;
+}
+.project-card:hover .project-card-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .project-card-overlay {
@@ -1027,6 +1144,172 @@ main > section {
 
 .project-card.is-hidden {
   display: none;
+}
+
+/* Event Photography — grouped blocks, one masonry grid per event */
+.event-group {
+  margin-bottom: 48px;
+}
+.event-group:last-child {
+  margin-bottom: 0;
+}
+.event-group-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.event-group-idx {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+}
+.event-group-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+.event-group-date {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+/* =================================================================
+   PHOTO EDITING — before/after comparison sliders
+   ================================================================= */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 800px) {
+  .compare-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+.compare-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  --pos: 50%;
+}
+.compare-after,
+.compare-before {
+  position: absolute;
+  inset: 0;
+}
+.compare-before {
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+.compare-label {
+  position: absolute;
+  top: 12px;
+  padding: 4px 9px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(11, 12, 14, 0.55);
+  border: 1px solid rgba(245, 243, 239, 0.15);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+.compare-label--before {
+  left: 12px;
+}
+.compare-label--after {
+  right: 12px;
+}
+
+.compare-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 2px;
+  background: var(--accent);
+  pointer-events: none;
+  transform: translateX(-1px);
+}
+.compare-handle::after {
+  content: "⟷";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #12080a;
+  font-size: 14px;
+}
+
+.compare-range {
+  appearance: none;
+  width: 100%;
+  height: 32px;
+  margin-top: 4px;
+  background: transparent;
+  cursor: none;
+}
+.compare-range::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--line);
+  border-radius: 999px;
+}
+.compare-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -7.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.compare-range::-moz-range-track {
+  height: 3px;
+  background: var(--line);
+  border-radius: 999px;
+}
+.compare-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.compare-info {
+  padding-top: 14px;
+}
+.compare-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.compare-meta {
+  font-size: 13px;
+  color: var(--ink-dim);
 }
 
 /* =================================================================
@@ -1334,6 +1617,16 @@ main > section {
 .lightbox-media {
   aspect-ratio: 16/9;
   position: relative;
+}
+.lightbox-media.is-vertical {
+  aspect-ratio: 9/16;
+  max-height: 60vh;
+  margin: 0 auto;
+}
+.lightbox-media.is-square {
+  aspect-ratio: 1/1;
+  max-height: 65vh;
+  margin: 0 auto;
 }
 .lightbox-info {
   padding: 28px;
