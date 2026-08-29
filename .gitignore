@@ -1,0 +1,10 @@
+.DS_Store
+projects/
+videos/
+designs/
+*.psd
+*.ai
+*.aep
+*.prproj
+*.mp4
+*.mov

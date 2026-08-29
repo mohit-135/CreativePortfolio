@@ -38,53 +38,91 @@
     video: {
       edits: [
         {
-          id: "v01", title: "Northbound — Brand Film", client: "Northbound Coffee Co.",
-          role: "Editor", tools: "Premiere Pro", year: "2025", duration: "01:32",
-          orientation: "horizontal",
-          desc: "A 90-second brand film cut from two days of documentary footage, paced to a single unbroken voiceover take.",
-          // fill: "linear-gradient(135deg,#2a1210,#0B0C0E 60%)",
-          video: "projects/your-showreel.mp4", // <-- swap this
+          id: "v01",
+          title: "Maastis Edit",
+          client: "Mastis Entertainment",
+          role: "Editor",
+          tools: "Premiere Pro",
+          year: "2026",
+          duration: "01:32",
+          orientation: "vertical",
+          desc: "A fast-paced edit focused on rhythm, transitions, and clean visual flow.",
+          fill: "linear-gradient(135deg,#2a1210,#0B0C0E 60%)",
+          video: "projects/videos/MaastisEdit.mp4",
         },
         {
-          id: "v02", title: "Kinfolk Collective — Tour Recap", client: "Kinfolk Collective (band)",
-          role: "Editor, Motion Graphics", tools: "Premiere Pro, After Effects", year: "2024", duration: "00:48",
+          id: "v02",
+          title: "Rap song video Edit",
+          client: "Vinayak mittal and Mayank Joshi",
+          role: "Editor",
+          tools: "Premiere Pro",
+          year: "2026",
+          duration: "00:48",
           orientation: "vertical",
-          desc: "A 12-city tour recap cut for socials, with kinetic-type overlays built to match the live mix.",
+          desc: "A vertical music edit built for social viewing, with pacing shaped around the track.",
           fill: "linear-gradient(135deg,#1c1424,#0B0C0E 60%)",
+          video: "projects/videos/song.mp4",
         },
         {
-          id: "v03", title: "Slow Made — Product Film", client: "Slow Made Goods",
-          role: "Editor", tools: "DaVinci Resolve", year: "2023", duration: "02:10",
+          id: "v03",
+          title: "Shimla Travel Edit",
+          client: "Abhishek Suthar",
+          role: "Editor",
+          tools: "Premiere Pro",
+          year: "2026",
+          duration: "02:10",
           orientation: "horizontal",
-          desc: "A quiet, process-led product film for a leather goods maker, shot handheld and cut to their workshop's actual sounds.",
+          desc: "A travel-style edit using pacing, cuts, and atmosphere to capture the feel of Shimla.",
           fill: "linear-gradient(135deg,#231a10,#0B0C0E 60%)",
+          video: "projects/videos/shimla.mp4",
         },
         {
-          id: "v04", title: "Rooftop Session — Reel", client: "Personal work",
-          role: "Editor", tools: "Premiere Pro", year: "2024", duration: "00:35",
-          orientation: "vertical",
-          desc: "A vertical highlight reel cut same-night from a rooftop live session, built for socials.",
+          id: "v04",
+          title: "You shake my Nerves",
+          client: "Personal work",
+          role: "Editor",
+          tools: "Davinci Resolve",
+          year: "2026",
+          duration: "00:13",
+          orientation: "horizontal",
+          desc: "A fast paced car edit with fast transitions and color grading.",
           fill: "linear-gradient(135deg,#1a1f24,#0B0C0E 60%)",
+          video: "projects/videos/GreatBallsOffire.mp4",
         },
       ],
       color: [
         {
-          id: "v05", title: "Dusk Run — Color Grade", client: "Personal work",
-          role: "Colorist", tools: "DaVinci Resolve", year: "2025", duration: "01:05",
+          id: "v05",
+          title: "Dusk Run — Color Grade",
+          client: "Personal work",
+          role: "Colorist",
+          tools: "DaVinci Resolve",
+          year: "2025",
+          duration: "01:05",
           orientation: "horizontal",
           desc: "A warm, low-contrast grade built around golden-hour footage — grain added back in after noise reduction.",
           fill: "linear-gradient(135deg,#2a1a10,#0B0C0E 60%)",
         },
         {
-          id: "v06", title: "Neon Alley — Grade Study", client: "Personal work",
-          role: "Colorist", tools: "DaVinci Resolve", year: "2024", duration: "00:52",
+          id: "v06",
+          title: "Neon Alley — Grade Study",
+          client: "Personal work",
+          role: "Colorist",
+          tools: "DaVinci Resolve",
+          year: "2024",
+          duration: "00:52",
           orientation: "vertical",
           desc: "A teal/magenta night grade study shot handheld, matched across three different lighting setups.",
           fill: "linear-gradient(135deg,#191029,#0B0C0E 60%)",
         },
         {
-          id: "v07", title: "Harvest — Documentary Grade", client: "Harvest Collective",
-          role: "Colorist", tools: "DaVinci Resolve", year: "2023", duration: "03:20",
+          id: "v07",
+          title: "Harvest — Documentary Grade",
+          client: "Harvest Collective",
+          role: "Colorist",
+          tools: "DaVinci Resolve",
+          year: "2023",
+          duration: "03:20",
           orientation: "horizontal",
           desc: "A naturalistic grade for a short documentary, matched across three cameras shot over one growing season.",
           fill: "linear-gradient(135deg,#1c2410,#0B0C0E 60%)",
@@ -93,46 +131,234 @@
     },
     photo: {
       photography: [
-        { id: "p01", title: "Portraits, Unposed", client: "Personal work", role: "Photographer", tools: "85mm f/1.4", year: "2023", orientation: "portrait", desc: "An ongoing series of portraits taken mid-conversation, before anyone has time to arrange themselves.", fill: "linear-gradient(135deg,#1a1414,#0B0C0E 60%)" },
-        { id: "p02", title: "Low Light, Long Table", client: "Personal work", role: "Photographer", tools: "Sony A7S III, 50mm f/1.4", year: "2024", orientation: "landscape", desc: "A series shot at a single dinner over four hours, tracking how a room changes as the light leaves it.", fill: "linear-gradient(135deg,#141a24,#0B0C0E 60%)" },
-        { id: "p03", title: "Street, Quiet Hours", client: "Personal work", role: "Photographer", tools: "35mm f/1.8", year: "2024", orientation: "square", desc: "Early-morning street frames shot before a city properly wakes up.", fill: "linear-gradient(135deg,#10181f,#0B0C0E 60%)" },
-        { id: "p04", title: "Textures & Still Life", client: "Personal work", role: "Photographer", tools: "Sony A7S III, 90mm macro", year: "2023", orientation: "portrait", desc: "A small still-life study built around natural window light and found objects.", fill: "linear-gradient(135deg,#24201a,#0B0C0E 60%)" },
-        { id: "p05", title: "Golden Hour, Coastline", client: "Personal work", role: "Photographer", tools: "24-70mm", year: "2024", orientation: "landscape", desc: "A coastal series shot across three evenings, chasing the same fifteen minutes of light.", fill: "linear-gradient(135deg,#241a10,#0B0C0E 60%)" },
-        { id: "p06", title: "Studio Portrait Series", client: "Personal work", role: "Photographer", tools: "Studio strobes, 85mm", year: "2023", orientation: "portrait", desc: "A controlled-light portrait series exploring hard shadow and negative space.", fill: "linear-gradient(135deg,#1a1420,#0B0C0E 60%)" },
+        {
+          id: "p01",
+          title: "Portraits, Unposed",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2025",
+          orientation: "portrait",
+          desc: "A portrait frame focused on natural expression and clean finishing.",
+          fill: "linear-gradient(135deg,#1a1414,#0B0C0E 60%)",
+          image: "projects/photos/photo1.jpg",
+        },
+        {
+          id: "p02",
+          title: "Low Light, Long Table",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2025",
+          orientation: "landscape",
+          desc: "A low-light frame edited for mood, contrast, and atmosphere.",
+          fill: "linear-gradient(135deg,#141a24,#0B0C0E 60%)",
+          image: "projects/photos/photo2.png",
+        },
+        {
+          id: "p03",
+          title: "Street, Quiet Hours",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2025",
+          orientation: "square",
+          desc: "A quiet street-style composition with a simple, graphic read.",
+          fill: "linear-gradient(135deg,#10181f,#0B0C0E 60%)",
+          image: "projects/photos/photo3.png",
+        },
+        {
+          id: "p04",
+          title: "Textures & Still Life",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2025",
+          orientation: "portrait",
+          desc: "A detail-led frame built around texture, light, and negative space.",
+          fill: "linear-gradient(135deg,#24201a,#0B0C0E 60%)",
+          image: "projects/photos/photo4.png",
+        },
+        {
+          id: "p05",
+          title: "Golden Hour, Coastline",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2025",
+          orientation: "landscape",
+          desc: "A warm outdoor frame finished for color and depth.",
+          fill: "linear-gradient(135deg,#241a10,#0B0C0E 60%)",
+          image: "projects/photos/photo5.jpg",
+        },
+        {
+          id: "p06",
+          title: "Studio Portrait Series",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2025",
+          orientation: "portrait",
+          desc: "A polished portrait frame with controlled contrast and clean tones.",
+          fill: "linear-gradient(135deg,#1a1420,#0B0C0E 60%)",
+          image: "projects/photos/photo38.jpg",
+        },
       ],
       event: {
         "Independence Day Celebration": {
           date: "15 Aug 2025",
           items: [
-            { id: "e01", title: "Flag Hoisting", role: "Event Photographer", tools: "24-70mm", orientation: "landscape", desc: "Morning flag-hoisting ceremony coverage, shot wide to capture the full gathering.", fill: "linear-gradient(135deg,#241610,#0B0C0E 60%)" },
-            { id: "e02", title: "Cultural Performance", role: "Event Photographer", tools: "70-200mm", orientation: "portrait", desc: "Stage performance coverage from the audience, shot on a long lens to stay unobtrusive.", fill: "linear-gradient(135deg,#1c1024,#0B0C0E 60%)" },
-            { id: "e03", title: "Crowd & Candids", role: "Event Photographer", tools: "35mm f/1.8", orientation: "square", desc: "Candid crowd moments shot between the scheduled program segments.", fill: "linear-gradient(135deg,#101f1a,#0B0C0E 60%)" },
-            { id: "e04", title: "Prize Distribution", role: "Event Photographer", tools: "50mm f/1.8", orientation: "landscape", desc: "Closing prize-distribution segment, lit with available stage light only.", fill: "linear-gradient(135deg,#241f14,#0B0C0E 60%)" },
+            {
+              id: "e01",
+              title: "Flag Hoisting",
+              role: "Event Photographer",
+              tools: "24-70mm",
+              orientation: "landscape",
+              desc: "Morning flag-hoisting ceremony coverage, shot wide to capture the full gathering.",
+              fill: "linear-gradient(135deg,#241610,#0B0C0E 60%)",
+            },
+            {
+              id: "e02",
+              title: "Cultural Performance",
+              role: "Event Photographer",
+              tools: "70-200mm",
+              orientation: "portrait",
+              desc: "Stage performance coverage from the audience, shot on a long lens to stay unobtrusive.",
+              fill: "linear-gradient(135deg,#1c1024,#0B0C0E 60%)",
+            },
+            {
+              id: "e03",
+              title: "Crowd & Candids",
+              role: "Event Photographer",
+              tools: "35mm f/1.8",
+              orientation: "square",
+              desc: "Candid crowd moments shot between the scheduled program segments.",
+              fill: "linear-gradient(135deg,#101f1a,#0B0C0E 60%)",
+            },
+            {
+              id: "e04",
+              title: "Prize Distribution",
+              role: "Event Photographer",
+              tools: "50mm f/1.8",
+              orientation: "landscape",
+              desc: "Closing prize-distribution segment, lit with available stage light only.",
+              fill: "linear-gradient(135deg,#241f14,#0B0C0E 60%)",
+            },
           ],
         },
         "Annual Club Meet": {
           date: "02 Nov 2025",
           items: [
-            { id: "e05", title: "Opening Address", role: "Event Photographer", tools: "24-70mm", orientation: "landscape", desc: "Opening remarks and welcome address, shot from the side aisle for a clean sightline.", fill: "linear-gradient(135deg,#141a24,#0B0C0E 60%)" },
-            { id: "e06", title: "Team Activities", role: "Event Photographer", tools: "35mm f/1.8", orientation: "portrait", desc: "Group activity coverage shot mid-action, favoring genuine reactions over posed shots.", fill: "linear-gradient(135deg,#1a1414,#0B0C0E 60%)" },
-            { id: "e07", title: "Group Portrait", role: "Event Photographer", tools: "24-70mm", orientation: "landscape", desc: "The full-club group portrait, lit with two off-camera flashes for even coverage.", fill: "linear-gradient(135deg,#24201a,#0B0C0E 60%)" },
+            {
+              id: "e05",
+              title: "Opening Address",
+              role: "Event Photographer",
+              tools: "24-70mm",
+              orientation: "landscape",
+              desc: "Opening remarks and welcome address, shot from the side aisle for a clean sightline.",
+              fill: "linear-gradient(135deg,#141a24,#0B0C0E 60%)",
+            },
+            {
+              id: "e06",
+              title: "Team Activities",
+              role: "Event Photographer",
+              tools: "35mm f/1.8",
+              orientation: "portrait",
+              desc: "Group activity coverage shot mid-action, favoring genuine reactions over posed shots.",
+              fill: "linear-gradient(135deg,#1a1414,#0B0C0E 60%)",
+            },
+            {
+              id: "e07",
+              title: "Group Portrait",
+              role: "Event Photographer",
+              tools: "24-70mm",
+              orientation: "landscape",
+              desc: "The full-club group portrait, lit with two off-camera flashes for even coverage.",
+              fill: "linear-gradient(135deg,#24201a,#0B0C0E 60%)",
+            },
           ],
         },
         "College Cultural Fest": {
           date: "20 Feb 2026",
           items: [
-            { id: "e08", title: "Stage Setup", role: "Event Photographer", tools: "16-35mm", orientation: "landscape", desc: "Pre-show wide shots of the stage and setup, used for the organizers' recap deck.", fill: "linear-gradient(135deg,#10181f,#0B0C0E 60%)" },
-            { id: "e09", title: "Dance Performance", role: "Event Photographer", tools: "70-200mm", orientation: "portrait", desc: "Peak-action frames from the closing dance performance, shot at a fast shutter under stage light.", fill: "linear-gradient(135deg,#191029,#0B0C0E 60%)" },
-            { id: "e10", title: "Backstage Candids", role: "Event Photographer", tools: "35mm f/1.8", orientation: "square", desc: "Quiet backstage moments shot before performers went on.", fill: "linear-gradient(135deg,#1c2410,#0B0C0E 60%)" },
-            { id: "e11", title: "Audience Reactions", role: "Event Photographer", tools: "85mm f/1.8", orientation: "portrait", desc: "Reaction shots from the front rows during the closing act.", fill: "linear-gradient(135deg,#241610,#0B0C0E 60%)" },
+            {
+              id: "e08",
+              title: "Stage Setup",
+              role: "Event Photographer",
+              tools: "16-35mm",
+              orientation: "landscape",
+              desc: "Pre-show wide shots of the stage and setup, used for the organizers' recap deck.",
+              fill: "linear-gradient(135deg,#10181f,#0B0C0E 60%)",
+            },
+            {
+              id: "e09",
+              title: "Dance Performance",
+              role: "Event Photographer",
+              tools: "70-200mm",
+              orientation: "portrait",
+              desc: "Peak-action frames from the closing dance performance, shot at a fast shutter under stage light.",
+              fill: "linear-gradient(135deg,#191029,#0B0C0E 60%)",
+            },
+            {
+              id: "e10",
+              title: "Backstage Candids",
+              role: "Event Photographer",
+              tools: "35mm f/1.8",
+              orientation: "square",
+              desc: "Quiet backstage moments shot before performers went on.",
+              fill: "linear-gradient(135deg,#1c2410,#0B0C0E 60%)",
+            },
+            {
+              id: "e11",
+              title: "Audience Reactions",
+              role: "Event Photographer",
+              tools: "85mm f/1.8",
+              orientation: "portrait",
+              desc: "Reaction shots from the front rows during the closing act.",
+              fill: "linear-gradient(135deg,#241610,#0B0C0E 60%)",
+            },
           ],
         },
       },
       editing: [
-        { id: "c01", title: "Portrait Retouch — Skin & Light", tools: "Photoshop, Lightroom", year: "2025", desc: "Frequency-separation skin retouching plus a re-lit background to match the subject's key light.", beforeFill: "linear-gradient(135deg,#3a3a38,#26251f 70%)", afterFill: "linear-gradient(135deg,#2a1414,#120a08 70%)" },
-        { id: "c02", title: "Product Cleanup — Background Swap", tools: "Photoshop", year: "2024", desc: "Clipped the product from a busy shelf shot and dropped it onto a seamless studio backdrop.", beforeFill: "linear-gradient(135deg,#2e2a24,#1a1712 70%)", afterFill: "linear-gradient(135deg,#141414,#0B0C0E 70%)" },
-        { id: "c03", title: "Landscape Color Grade", tools: "Lightroom Classic", year: "2024", desc: "Recovered a flat, overcast coastline shot into a warmer golden-hour grade.", beforeFill: "linear-gradient(135deg,#2b2f33,#1c2024 70%)", afterFill: "linear-gradient(135deg,#3a2412,#160c06 70%)" },
-        { id: "c04", title: "Event Photo — Exposure Recovery", tools: "Lightroom Classic", year: "2025", desc: "Pulled a badly underexposed indoor event frame back to a usable, natural-looking exposure.", beforeFill: "linear-gradient(135deg,#141414,#08080a 70%)", afterFill: "linear-gradient(135deg,#28221a,#141210 70%)" },
+        {
+          id: "c01",
+          title: "Portrait Retouch — Skin & Light",
+          tools: "Photoshop, Lightroom",
+          year: "2025",
+          desc: "Frequency-separation skin retouching plus a re-lit background to match the subject's key light.",
+          beforeFill: "linear-gradient(135deg,#3a3a38,#26251f 70%)",
+          afterFill: "linear-gradient(135deg,#2a1414,#120a08 70%)",
+          beforeImage: "projects/photoedit/photo0201.png",
+          afterImage: "projects/photoedit/photo0202.png",
+        },
+        {
+          id: "c02",
+          title: "Product Cleanup — Background Swap",
+          tools: "Photoshop",
+          year: "2024",
+          desc: "Clipped the product from a busy shelf shot and dropped it onto a seamless studio backdrop.",
+          beforeFill: "linear-gradient(135deg,#2e2a24,#1a1712 70%)",
+          afterFill: "linear-gradient(135deg,#141414,#0B0C0E 70%)",
+        },
+        {
+          id: "c03",
+          title: "Landscape Color Grade",
+          tools: "Lightroom Classic",
+          year: "2024",
+          desc: "Recovered a flat, overcast coastline shot into a warmer golden-hour grade.",
+          beforeFill: "linear-gradient(135deg,#2b2f33,#1c2024 70%)",
+          afterFill: "linear-gradient(135deg,#3a2412,#160c06 70%)",
+        },
+        {
+          id: "c04",
+          title: "Event Photo — Exposure Recovery",
+          tools: "Lightroom Classic",
+          year: "2025",
+          desc: "Pulled a badly underexposed indoor event frame back to a usable, natural-looking exposure.",
+          beforeFill: "linear-gradient(135deg,#141414,#08080a 70%)",
+          afterFill: "linear-gradient(135deg,#28221a,#141210 70%)",
+        },
       ],
     },
   };
@@ -176,67 +402,191 @@
      above, so editing the data is enough to change what's on screen.
      =============================================================== */
   var ORIENTATION_CLASS = {
-    horizontal: "is-horizontal", vertical: "is-vertical",
-    landscape: "is-landscape", portrait: "is-portrait", square: "is-square",
+    horizontal: "is-horizontal",
+    vertical: "is-vertical",
+    landscape: "is-landscape",
+    portrait: "is-portrait",
+    square: "is-square",
   };
 
   // Fades newly-rendered cards in. Used on every tab/mode switch since
   // the grids are re-rendered rather than scroll-triggered once.
   function animateCardsIn(container) {
-    if (!container || prefersReducedMotion || typeof gsap === "undefined") return;
-    var items = container.querySelectorAll(".project-card, .compare-card, .event-group");
-    gsap.fromTo(items, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.05 });
+    if (!container || prefersReducedMotion || typeof gsap === "undefined")
+      return;
+    var items = container.querySelectorAll(
+      ".project-card, .compare-card, .event-group",
+    );
+    gsap.fromTo(
+      items,
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.05 },
+    );
+  }
+
+  function mediaHTML(item, className, altText) {
+    if (item.video) {
+      return (
+        '<video class="' +
+        className +
+        ' project-card-video" muted loop playsinline preload="metadata">' +
+        '<source src="' +
+        item.video +
+        '" type="video/mp4">' +
+        "</video>"
+      );
+    }
+
+    if (item.image) {
+      return (
+        '<img class="' +
+        className +
+        '" loading="lazy" src="' +
+        item.image +
+        '" alt="' +
+        (altText || "") +
+        '">'
+      );
+    }
+
+    return (
+      '<div class="' +
+      className +
+      '" style="background:' +
+      item.fill +
+      '"></div>'
+    );
+  }
+
+  function compareMediaLayerHTML(className, image, fill, altText) {
+    if (image) {
+      return (
+        '<img class="' +
+        className +
+        '" src="' +
+        image +
+        '" alt="' +
+        altText +
+        '">'
+      );
+    }
+
+    return (
+      '<div class="' + className + '" style="background:' + fill + '"></div>'
+    );
+  }
+
+  function initVideoPreviews(container) {
+    container.querySelectorAll(".project-card-video").forEach(function (video) {
+      var card = video.closest(".project-card");
+      if (!card) return;
+
+      function playPreview() {
+        video.play().catch(function () {});
+      }
+
+      function pausePreview() {
+        video.pause();
+      }
+
+      card.addEventListener("mouseenter", playPreview);
+      card.addEventListener("mouseleave", pausePreview);
+      card.addEventListener("focusin", playPreview);
+      card.addEventListener("focusout", pausePreview);
+    });
   }
 
   function videoCardHTML(v, idx) {
     return (
-      '<article class="project-card" data-video-id="' + v.id + '" tabindex="0" ' +
-      'data-cursor="link" role="button" aria-label="Play project: ' + v.title + '">' +
-        '<div class="project-card-media ' + ORIENTATION_CLASS[v.orientation] + '">' +
-          '<div class="project-card-fill" style="background:' + v.fill + '"></div>' +
-          '<span class="project-card-play" aria-hidden="true"></span>' +
-          '<span class="project-card-tag">' + (v.tagOverride || "Video") + '</span>' +
-          '<span class="project-card-idx" data-mono>VID_' + String(idx + 1).padStart(2, "0") + '</span>' +
-          '<span class="project-card-duration" data-mono>' + v.duration + '</span>' +
-          '<div class="project-card-overlay">' +
-            '<p class="project-card-title">' + v.title + '</p>' +
-            '<p class="project-card-meta">' + v.client + ' — ' + v.year + '</p>' +
-          '</div>' +
-        '</div>' +
-      '</article>'
+      '<article class="project-card" data-video-id="' +
+      v.id +
+      '" tabindex="0" ' +
+      'data-cursor="link" role="button" aria-label="Play project: ' +
+      v.title +
+      '">' +
+      '<div class="project-card-media ' +
+      ORIENTATION_CLASS[v.orientation] +
+      '">' +
+      mediaHTML(v, "project-card-fill", v.title) +
+      '<span class="project-card-play" aria-hidden="true"></span>' +
+      '<span class="project-card-tag">' +
+      (v.tagOverride || "Video") +
+      "</span>" +
+      '<span class="project-card-idx" data-mono>VID_' +
+      String(idx + 1).padStart(2, "0") +
+      "</span>" +
+      '<span class="project-card-duration" data-mono>' +
+      v.duration +
+      "</span>" +
+      '<div class="project-card-overlay">' +
+      '<p class="project-card-title">' +
+      v.title +
+      "</p>" +
+      '<p class="project-card-meta">' +
+      v.client +
+      " — " +
+      v.year +
+      "</p>" +
+      "</div>" +
+      "</div>" +
+      "</article>"
     );
   }
 
   function photoCardHTML(p, idx, idxPrefix) {
     return (
-      '<article class="project-card" data-photo-id="' + p.id + '" tabindex="0" ' +
-      'data-cursor="link" role="button" aria-label="View photo: ' + p.title + '">' +
-        '<div class="project-card-media ' + ORIENTATION_CLASS[p.orientation] + '">' +
-          '<div class="project-card-fill" style="background:' + p.fill + '"></div>' +
-          '<span class="project-card-idx" data-mono>' + idxPrefix + '_' + String(idx + 1).padStart(2, "0") + '</span>' +
-          '<div class="project-card-overlay">' +
-            '<p class="project-card-title">' + p.title + '</p>' +
-            '<p class="project-card-meta">' + (p.client || p.role) + '</p>' +
-          '</div>' +
-        '</div>' +
-      '</article>'
+      '<article class="project-card" data-photo-id="' +
+      p.id +
+      '" tabindex="0" ' +
+      'data-cursor="link" role="button" aria-label="View photo: ' +
+      p.title +
+      '">' +
+      '<div class="project-card-media ' +
+      ORIENTATION_CLASS[p.orientation] +
+      '">' +
+      mediaHTML(p, "project-card-fill", p.title) +
+      '<span class="project-card-idx" data-mono>' +
+      idxPrefix +
+      "_" +
+      String(idx + 1).padStart(2, "0") +
+      "</span>" +
+      '<div class="project-card-overlay">' +
+      '<p class="project-card-title">' +
+      p.title +
+      "</p>" +
+      '<p class="project-card-meta">' +
+      (p.client || p.role) +
+      "</p>" +
+      "</div>" +
+      "</div>" +
+      "</article>"
     );
   }
 
   function renderVideoGrid(subtab) {
     var grid = document.getElementById("videoGrid");
     var list = WORK.video[subtab];
-    grid.innerHTML = list.map(function (v, i) { return videoCardHTML(v, i); }).join("");
+    grid.innerHTML = list
+      .map(function (v, i) {
+        return videoCardHTML(v, i);
+      })
+      .join("");
     document.getElementById("videoCount").textContent =
       list.length + (list.length === 1 ? " video" : " videos");
+    initVideoPreviews(grid);
     animateCardsIn(grid);
   }
 
   function renderPhotographyGrid() {
     var list = WORK.photo.photography;
-    var html = '<div class="photo-grid" id="photoGrid">' +
-      list.map(function (p, i) { return photoCardHTML(p, i, "PHO"); }).join("") +
-    "</div>";
+    var html =
+      '<div class="photo-grid" id="photoGrid">' +
+      list
+        .map(function (p, i) {
+          return photoCardHTML(p, i, "PHO");
+        })
+        .join("") +
+      "</div>";
     document.getElementById("photoPanelBody").innerHTML = html;
     document.getElementById("photoCount").textContent =
       list.length + (list.length === 1 ? " photo" : " photos");
@@ -248,22 +598,34 @@
     var eventNames = Object.keys(events);
     var totalCount = 0;
 
-    var html = eventNames.map(function (name, gi) {
-      var group = events[name];
-      totalCount += group.items.length;
-      return (
-        '<div class="event-group">' +
+    var html = eventNames
+      .map(function (name, gi) {
+        var group = events[name];
+        totalCount += group.items.length;
+        return (
+          '<div class="event-group">' +
           '<div class="event-group-head">' +
-            '<span class="event-group-idx" data-mono>' + String(gi + 1).padStart(2, "0") + '</span>' +
-            '<span class="event-group-title">' + name + '</span>' +
-            '<span class="event-group-date" data-mono>' + group.date + '</span>' +
-          '</div>' +
+          '<span class="event-group-idx" data-mono>' +
+          String(gi + 1).padStart(2, "0") +
+          "</span>" +
+          '<span class="event-group-title">' +
+          name +
+          "</span>" +
+          '<span class="event-group-date" data-mono>' +
+          group.date +
+          "</span>" +
+          "</div>" +
           '<div class="photo-grid">' +
-            group.items.map(function (p, i) { return photoCardHTML(p, i, "EVT"); }).join("") +
-          '</div>' +
-        '</div>'
-      );
-    }).join("");
+          group.items
+            .map(function (p, i) {
+              return photoCardHTML(p, i, "EVT");
+            })
+            .join("") +
+          "</div>" +
+          "</div>"
+        );
+      })
+      .join("");
 
     document.getElementById("photoPanelBody").innerHTML = html;
     document.getElementById("photoCount").textContent =
@@ -273,28 +635,53 @@
 
   function renderEditingCompare() {
     var list = WORK.photo.editing;
-    var html = '<div class="compare-grid">' +
-      list.map(function (c) {
-        return (
-          '<div class="compare-card">' +
-            '<div class="compare-media" id="compareMedia-' + c.id + '">' +
-              '<div class="compare-after" style="background:' + c.afterFill + '"></div>' +
-              '<div class="compare-before" style="background:' + c.beforeFill + '"></div>' +
-              '<span class="compare-label compare-label--before" data-mono>BEFORE</span>' +
-              '<span class="compare-label compare-label--after" data-mono>AFTER</span>' +
-              '<div class="compare-handle"></div>' +
-            '</div>' +
+    var html =
+      '<div class="compare-grid">' +
+      list
+        .map(function (c) {
+          return (
+            '<div class="compare-card">' +
+            '<div class="compare-media" id="compareMedia-' +
+            c.id +
+            '">' +
+            compareMediaLayerHTML(
+              "compare-after",
+              c.afterImage,
+              c.afterFill,
+              c.title + " after edit",
+            ) +
+            compareMediaLayerHTML(
+              "compare-before",
+              c.beforeImage,
+              c.beforeFill,
+              c.title + " before edit",
+            ) +
+            '<span class="compare-label compare-label--before" data-mono>BEFORE</span>' +
+            '<span class="compare-label compare-label--after" data-mono>AFTER</span>' +
+            '<div class="compare-handle"></div>' +
+            "</div>" +
             '<input type="range" class="compare-range" min="0" max="100" value="50" ' +
-              'aria-label="Drag to compare before and after for ' + c.title + '" ' +
-              'data-compare-target="compareMedia-' + c.id + '">' +
+            'aria-label="Drag to compare before and after for ' +
+            c.title +
+            '" ' +
+            'data-compare-target="compareMedia-' +
+            c.id +
+            '">' +
             '<div class="compare-info">' +
-              '<p class="compare-title">' + c.title + '</p>' +
-              '<p class="compare-meta" data-mono>' + c.tools + ' — ' + c.year + '</p>' +
-            '</div>' +
-          '</div>'
-        );
-      }).join("") +
-    "</div>";
+            '<p class="compare-title">' +
+            c.title +
+            "</p>" +
+            '<p class="compare-meta" data-mono>' +
+            c.tools +
+            " — " +
+            c.year +
+            "</p>" +
+            "</div>" +
+            "</div>"
+          );
+        })
+        .join("") +
+      "</div>";
     document.getElementById("photoPanelBody").innerHTML = html;
     document.getElementById("photoCount").textContent =
       list.length + " before / after pairs";
@@ -310,14 +697,20 @@
       .concat(WORK.photo.photography.slice(0, 2))
       .concat(WORK.video.color.slice(0, 1))
       .concat(WORK.photo.photography.slice(2, 4));
-    var html = featured.map(function (item, i) {
-      return (
-        '<div class="filmstrip-cell" data-mono>' +
-          '<div class="filmstrip-cell-fill" style="background:' + item.fill + '"></div>' +
-          '<span class="filmstrip-cell-label">' + String(i + 1).padStart(2, "0") + '</span>' +
-        '</div>'
-      );
-    }).join("");
+    var html = featured
+      .map(function (item, i) {
+        return (
+          '<div class="filmstrip-cell" data-mono>' +
+          '<div class="filmstrip-cell-fill" style="background:' +
+          item.fill +
+          '"></div>' +
+          '<span class="filmstrip-cell-label">' +
+          String(i + 1).padStart(2, "0") +
+          "</span>" +
+          "</div>"
+        );
+      })
+      .join("");
     strip.innerHTML = html;
   }
 
@@ -352,7 +745,6 @@
   renderPhotographyGrid();
   renderFilmstrip();
   renderServices();
-
 
   document.getElementById("footerYear").textContent = new Date().getFullYear();
 
@@ -573,10 +965,10 @@
     /* --- Reduced motion: skip text-splitting and scroll-triggered
        motion entirely, just reveal everything in its final state --- */
     if (prefersReducedMotion) {
-      gsap.set(
-        ".reveal-up, .tools-grid > *, .services-list > *",
-        { opacity: 1, y: 0 },
-      );
+      gsap.set(".reveal-up, .tools-grid > *, .services-list > *", {
+        opacity: 1,
+        y: 0,
+      });
       ScrollTrigger.create({
         trigger: ".hero",
         start: "bottom top",
@@ -643,20 +1035,18 @@
     });
 
     /* --- Tool cards + project cards + service rows: staggered by parent --- */
-    gsap.utils
-      .toArray(".tools-grid, .services-list")
-      .forEach(function (group) {
-        var items = group.children;
-        gsap.set(items, { opacity: 0, y: 24 });
-        gsap.to(items, {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.06,
-          scrollTrigger: { trigger: group, start: "top 85%" },
-        });
+    gsap.utils.toArray(".tools-grid, .services-list").forEach(function (group) {
+      var items = group.children;
+      gsap.set(items, { opacity: 0, y: 24 });
+      gsap.to(items, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.06,
+        scrollTrigger: { trigger: group, start: "top 85%" },
       });
+    });
 
     /* --- Nav background solidifies after scrolling past hero --- */
     ScrollTrigger.create({
@@ -798,12 +1188,22 @@
   function getVideoCollection() {
     return WORK.video[workState.videoSub].map(function (v) {
       return {
-        id: v.id, kind: "video", title: v.title, fill: v.fill, orientation: v.orientation,
-        category: workState.videoSub === "edits" ? "Video — Edit" : "Video — Color Grade",
+        id: v.id,
+        kind: "video",
+        title: v.title,
+        fill: v.fill,
+        video: v.video,
+        orientation: v.orientation,
+        category:
+          workState.videoSub === "edits"
+            ? "Video — Edit"
+            : "Video — Color Grade",
         desc: v.desc,
         meta: [
-          { label: "Client", value: v.client }, { label: "Role", value: v.role },
-          { label: "Tools", value: v.tools }, { label: "Duration", value: v.duration },
+          { label: "Client", value: v.client },
+          { label: "Role", value: v.role },
+          { label: "Tools", value: v.tools },
+          { label: "Duration", value: v.duration },
         ],
       };
     });
@@ -813,7 +1213,9 @@
     var events = WORK.photo.event;
     var names = Object.keys(events);
     for (var i = 0; i < names.length; i++) {
-      var found = events[names[i]].items.some(function (item) { return item.id === photoId; });
+      var found = events[names[i]].items.some(function (item) {
+        return item.id === photoId;
+      });
       if (found) return { name: names[i], group: events[names[i]] };
     }
     return null;
@@ -823,9 +1225,19 @@
     if (workState.photoSub === "photography") {
       return WORK.photo.photography.map(function (p) {
         return {
-          id: p.id, kind: "photo", title: p.title, fill: p.fill, orientation: p.orientation,
-          category: "Photography", desc: p.desc,
-          meta: [{ label: "Role", value: p.role }, { label: "Tools", value: p.tools }, { label: "Year", value: p.year }],
+          id: p.id,
+          kind: "photo",
+          title: p.title,
+          fill: p.fill,
+          image: p.image,
+          orientation: p.orientation,
+          category: "Photography",
+          desc: p.desc,
+          meta: [
+            { label: "Role", value: p.role },
+            { label: "Tools", value: p.tools },
+            { label: "Year", value: p.year },
+          ],
         };
       });
     }
@@ -835,9 +1247,19 @@
       var group = WORK.photo.event[eventName];
       return group.items.map(function (p) {
         return {
-          id: p.id, kind: "photo", title: p.title, fill: p.fill, orientation: p.orientation,
-          category: "Event Photography — " + eventName, desc: p.desc,
-          meta: [{ label: "Role", value: p.role }, { label: "Tools", value: p.tools }, { label: "Event date", value: group.date }],
+          id: p.id,
+          kind: "photo",
+          title: p.title,
+          fill: p.fill,
+          image: p.image,
+          orientation: p.orientation,
+          category: "Event Photography — " + eventName,
+          desc: p.desc,
+          meta: [
+            { label: "Role", value: p.role },
+            { label: "Tools", value: p.tools },
+            { label: "Event date", value: group.date },
+          ],
         };
       });
     }
@@ -858,23 +1280,44 @@
     var lastFocused = null;
 
     function populate(index) {
-      currentIndex = (index + currentCollection.length) % currentCollection.length;
+      currentIndex =
+        (index + currentCollection.length) % currentCollection.length;
       var item = currentCollection[currentIndex];
 
-      mediaEl.style.background = item.fill;
-      mediaEl.classList.toggle("is-vertical", item.orientation === "vertical" || item.orientation === "portrait");
+      mediaEl.style.background = item.fill || "";
+      if (item.video) {
+        mediaEl.innerHTML =
+          "<video controls autoplay muted playsinline>" +
+          '<source src="' +
+          item.video +
+          '" type="video/mp4">' +
+          "</video>";
+      } else if (item.image) {
+        mediaEl.innerHTML =
+          '<img src="' + item.image + '" alt="' + item.title + '">';
+      } else {
+        mediaEl.innerHTML = "";
+      }
+      mediaEl.classList.toggle(
+        "is-vertical",
+        item.orientation === "vertical" || item.orientation === "portrait",
+      );
       mediaEl.classList.toggle("is-square", item.orientation === "square");
       categoryEl.textContent = item.category;
       titleEl.textContent = item.title;
       descEl.textContent = item.desc;
-      metaEl.innerHTML = item.meta.map(function (m) {
-        return "<div><dt>" + m.label + "</dt><dd>" + m.value + "</dd></div>";
-      }).join("");
+      metaEl.innerHTML = item.meta
+        .map(function (m) {
+          return "<div><dt>" + m.label + "</dt><dd>" + m.value + "</dd></div>";
+        })
+        .join("");
     }
 
     function open(collection, itemId) {
       currentCollection = collection;
-      var index = currentCollection.findIndex(function (item) { return item.id === itemId; });
+      var index = currentCollection.findIndex(function (item) {
+        return item.id === itemId;
+      });
       populate(index === -1 ? 0 : index);
       lastFocused = document.activeElement;
       lightbox.classList.add("is-open");
@@ -887,6 +1330,7 @@
       lightbox.classList.remove("is-open");
       lightbox.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
+      mediaEl.innerHTML = "";
       if (lastFocused) lastFocused.focus();
     }
 
@@ -894,33 +1338,58 @@
       var videoCard = e.target.closest("[data-video-id]");
       var photoCard = e.target.closest("[data-photo-id]");
       if (videoCard) open(getVideoCollection(), videoCard.dataset.videoId);
-      else if (photoCard) open(getPhotoCollection(photoCard.dataset.photoId), photoCard.dataset.photoId);
+      else if (photoCard)
+        open(
+          getPhotoCollection(photoCard.dataset.photoId),
+          photoCard.dataset.photoId,
+        );
     }
 
-    document.getElementById("videoGrid").addEventListener("click", handleGridActivate);
-    document.getElementById("videoGrid").addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
-        var card = e.target.closest("[data-video-id]");
-        if (card) { e.preventDefault(); open(getVideoCollection(), card.dataset.videoId); }
-      }
-    });
+    document
+      .getElementById("videoGrid")
+      .addEventListener("click", handleGridActivate);
+    document
+      .getElementById("videoGrid")
+      .addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          var card = e.target.closest("[data-video-id]");
+          if (card) {
+            e.preventDefault();
+            open(getVideoCollection(), card.dataset.videoId);
+          }
+        }
+      });
 
     // Photo panel body is re-rendered on tab switches, so delegate from
     // the stable parent rather than the (replaced) grid element itself
-    document.getElementById("photoPanelBody").addEventListener("click", handleGridActivate);
-    document.getElementById("photoPanelBody").addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
-        var card = e.target.closest("[data-photo-id]");
-        if (card) { e.preventDefault(); open(getPhotoCollection(card.dataset.photoId), card.dataset.photoId); }
-      }
-    });
+    document
+      .getElementById("photoPanelBody")
+      .addEventListener("click", handleGridActivate);
+    document
+      .getElementById("photoPanelBody")
+      .addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          var card = e.target.closest("[data-photo-id]");
+          if (card) {
+            e.preventDefault();
+            open(
+              getPhotoCollection(card.dataset.photoId),
+              card.dataset.photoId,
+            );
+          }
+        }
+      });
 
     lightbox.querySelectorAll("[data-lightbox-close]").forEach(function (el) {
       el.addEventListener("click", close);
     });
 
-    prevBtn.addEventListener("click", function () { populate(currentIndex - 1); });
-    nextBtn.addEventListener("click", function () { populate(currentIndex + 1); });
+    prevBtn.addEventListener("click", function () {
+      populate(currentIndex - 1);
+    });
+    nextBtn.addEventListener("click", function () {
+      populate(currentIndex + 1);
+    });
 
     document.addEventListener("keydown", function (e) {
       if (!lightbox.classList.contains("is-open")) return;
@@ -941,7 +1410,9 @@
     document.querySelectorAll(".compare-range").forEach(function (range) {
       var media = document.getElementById(range.dataset.compareTarget);
       if (!media) return;
-      function update() { media.style.setProperty("--pos", range.value + "%"); }
+      function update() {
+        media.style.setProperty("--pos", range.value + "%");
+      }
       range.addEventListener("input", update);
       update();
     });
