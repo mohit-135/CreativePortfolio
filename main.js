@@ -39,7 +39,7 @@
       tools: "Premiere Pro, DaVinci Resolve",
       year: "2025",
       desc: "A 90-second brand film cut from two days of documentary footage, paced to a single unbroken voiceover take.",
-      fill: "linear-gradient(135deg,#2a1210,#0B0C0E 60%)",
+      fill: "linear-gradient(135deg,#1a1c24,#0B0C0E 60%)",
     },
     {
       id: "p02",
@@ -775,7 +775,7 @@
      if you later move to a different backend — just point fetch()
      at your new URL and adjust the response check if needed.
      =============================================================== */
-  var FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID"; // <-- swap this
+  var FORM_ENDPOINT = "https://formspree.io/f/xrpgbldz"; // <-- swap this
 
   function initContactForm() {
     var form = document.getElementById("contactForm");
