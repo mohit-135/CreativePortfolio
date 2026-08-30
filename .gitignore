@@ -1,10 +1,13 @@
 .DS_Store
-projects/
-videos/
+# projects/
+# videos/
+photos/
+photoedit/
+Eventphotography/
 designs/
 *.psd
 *.ai
 *.aep
 *.prproj
-*.mp4
-*.mov
+# *.mp4
+# *.mov
