@@ -97,7 +97,7 @@
           client: "Personal work",
           role: "Colorist",
           tools: "DaVinci Resolve",
-          year: "2025",
+          year: "2026",
           duration: "01:05",
           orientation: "horizontal",
           desc: "A warm, low-contrast grade built around golden-hour footage — grain added back in after noise reduction.",
@@ -137,11 +137,11 @@
           client: "Personal work",
           role: "Photographer",
           tools: "Camera, Lightroom",
-          year: "2025",
+          year: "2026",
           orientation: "portrait",
           desc: "A portrait frame focused on natural expression and clean finishing.",
           fill: "linear-gradient(135deg,#1a1414,#0B0C0E 60%)",
-          image: "projects/photos/photo1.jpg",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/GAZjYqytvYTV2tiGWNWk/image.jpg",
         },
         {
           id: "p02",
@@ -149,11 +149,11 @@
           client: "Personal work",
           role: "Photographer",
           tools: "Camera, Lightroom",
-          year: "2025",
-          orientation: "landscape",
+          year: "2026",
+          orientation: "portrait",
           desc: "A low-light frame edited for mood, contrast, and atmosphere.",
           fill: "linear-gradient(135deg,#141a24,#0B0C0E 60%)",
-          image: "projects/photos/photo2.png",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/UqnS0jwLK4bxYECCHDHo/image.png",
         },
         {
           id: "p03",
@@ -161,11 +161,11 @@
           client: "Personal work",
           role: "Photographer",
           tools: "Camera, Lightroom",
-          year: "2025",
-          orientation: "square",
+          year: "2026",
+          orientation: "portrait",
           desc: "A quiet street-style composition with a simple, graphic read.",
           fill: "linear-gradient(135deg,#10181f,#0B0C0E 60%)",
-          image: "projects/photos/photo3.png",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/ZOPliFd1eDSLkOHbTuqG/image.png",
         },
         {
           id: "p04",
@@ -173,11 +173,11 @@
           client: "Personal work",
           role: "Photographer",
           tools: "Camera, Lightroom",
-          year: "2025",
-          orientation: "portrait",
+          year: "2026",
+          orientation: "landscape",
           desc: "A detail-led frame built around texture, light, and negative space.",
           fill: "linear-gradient(135deg,#24201a,#0B0C0E 60%)",
-          image: "projects/photos/photo4.png",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/RqDVetaWFNWibAWWspYt/image.png",
         },
         {
           id: "p05",
@@ -185,11 +185,11 @@
           client: "Personal work",
           role: "Photographer",
           tools: "Camera, Lightroom",
-          year: "2025",
-          orientation: "landscape",
+          year: "2026",
+          orientation: "portrait",
           desc: "A warm outdoor frame finished for color and depth.",
           fill: "linear-gradient(135deg,#241a10,#0B0C0E 60%)",
-          image: "projects/photos/photo5.jpg",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/PNPy8kNf2w7En2KJafpb/image.jpg",
         },
         {
           id: "p06",
@@ -197,16 +197,52 @@
           client: "Personal work",
           role: "Photographer",
           tools: "Camera, Lightroom",
-          year: "2025",
+          year: "2026",
           orientation: "portrait",
           desc: "A polished portrait frame with controlled contrast and clean tones.",
           fill: "linear-gradient(135deg,#1a1420,#0B0C0E 60%)",
-          image: "projects/photos/photo38.jpg",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/b3Dm9472vSHfbwQ77MzG/image.jpg",
+        },
+        {
+          id: "p07",
+          title: "Dance Performance Candids",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2026",
+          orientation: "portrait",
+          desc: "A polished portrait frame with controlled contrast and clean tones.",
+          fill: "linear-gradient(135deg,#1a1420,#0B0C0E 60%)",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/k7PRZYYGbL5gUp8TzpRt/image.jpg",
+        },
+        {
+          id: "p08",
+          title: "Humayun Tomb",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Mobile, Lightroom",
+          year: "2026",
+          orientation: "landscape",
+          desc: "A polished portrait frame with controlled contrast and clean tones.",
+          fill: "linear-gradient(135deg,#1a1420,#0B0C0E 60%)",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/x8pgBc16xsKb4z0p29Cy/image.png",
+        },
+        {
+          id: "p09",
+          title: "Golden Ratio",
+          client: "Personal work",
+          role: "Photographer",
+          tools: "Camera, Lightroom",
+          year: "2026",
+          orientation: "landscape",
+          desc: "A warm outdoor frame finished for color and depth.",
+          fill: "linear-gradient(135deg,#241a10,#0B0C0E 60%)",
+          image: "https://plain-apac-prod-public.komododecks.com/202608/30/r0DKLa4EpyVRPVUlusaO/image.png",
         },
       ],
       event: {
         "Independence Day Celebration": {
-          date: "15 Aug 2025",
+          date: "15 Aug 2026",
           items: [
             {
               id: "e01",
@@ -247,7 +283,7 @@
           ],
         },
         "Annual Club Meet": {
-          date: "02 Nov 2025",
+          date: "02 Nov 2026",
           items: [
             {
               id: "e05",
@@ -325,7 +361,7 @@
           id: "c01",
           title: "Portrait Retouch — Skin & Light",
           tools: "Photoshop, Lightroom",
-          year: "2025",
+          year: "2026",
           desc: "Frequency-separation skin retouching plus a re-lit background to match the subject's key light.",
           beforeFill: "linear-gradient(135deg,#3a3a38,#26251f 70%)",
           afterFill: "linear-gradient(135deg,#2a1414,#120a08 70%)",
@@ -354,7 +390,7 @@
           id: "c04",
           title: "Event Photo — Exposure Recovery",
           tools: "Lightroom Classic",
-          year: "2025",
+          year: "2026",
           desc: "Pulled a badly underexposed indoor event frame back to a usable, natural-looking exposure.",
           beforeFill: "linear-gradient(135deg,#141414,#08080a 70%)",
           afterFill: "linear-gradient(135deg,#28221a,#141210 70%)",
@@ -453,6 +489,32 @@
       '<div class="' +
       className +
       '" style="background:' +
+      item.fill +
+      '"></div>'
+    );
+  }
+
+  function filmstripMediaHTML(item) {
+    if (item.video) {
+      return (
+        '<video class="filmstrip-cell-fill" muted loop playsinline autoplay preload="metadata">' +
+        '<source src="' +
+        item.video +
+        '" type="video/mp4">' +
+        "</video>"
+      );
+    }
+
+    if (item.image) {
+      return (
+        '<img class="filmstrip-cell-fill" loading="lazy" src="' +
+        item.image +
+        '" alt="">'
+      );
+    }
+
+    return (
+      '<div class="filmstrip-cell-fill" style="background:' +
       item.fill +
       '"></div>'
     );
@@ -691,19 +753,13 @@
 
   function renderFilmstrip() {
     var strip = document.getElementById("filmstrip");
-    // Purely decorative highlight reel — a small curated mix of video + photo work
-    var featured = []
-      .concat(WORK.video.edits.slice(0, 2))
-      .concat(WORK.photo.photography.slice(0, 2))
-      .concat(WORK.video.color.slice(0, 1))
-      .concat(WORK.photo.photography.slice(2, 4));
+    // Purely decorative highlight reel — photo frames only.
+    var featured = WORK.photo.photography.slice(0, 6);
     var html = featured
       .map(function (item, i) {
         return (
           '<div class="filmstrip-cell" data-mono>' +
-          '<div class="filmstrip-cell-fill" style="background:' +
-          item.fill +
-          '"></div>' +
+          filmstripMediaHTML(item) +
           '<span class="filmstrip-cell-label">' +
           String(i + 1).padStart(2, "0") +
           "</span>" +
