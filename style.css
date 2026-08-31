@@ -1487,12 +1487,20 @@ main > section {
     width: auto;
   }
 }
-.btn-label-sending {
+.btn .btn-label-default,
+.btn .btn-label-sending {
+  display: inline-block;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.btn .btn-label-sending {
   display: none;
 }
+
 .form-submit.is-sending .btn-label-default {
   display: none;
 }
+
 .form-submit.is-sending .btn-label-sending {
   display: inline-block;
 }
