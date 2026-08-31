@@ -366,8 +366,8 @@
           desc: "Frequency-separation skin retouching plus a re-lit background to match the subject's key light.",
           beforeFill: "linear-gradient(135deg,#3a3a38,#26251f 70%)",
           afterFill: "linear-gradient(135deg,#2a1414,#120a08 70%)",
-          beforeImage: "projects/photoedit/photo0201.png",
-          afterImage: "projects/photoedit/photo0202.png",
+          beforeImage: "projects/photoedit/edit0101.jpg",
+          afterImage: "projects/photoedit/edit0102.jpg",
         },
         {
           id: "c02",
@@ -377,6 +377,8 @@
           desc: "Clipped the product from a busy shelf shot and dropped it onto a seamless studio backdrop.",
           beforeFill: "linear-gradient(135deg,#2e2a24,#1a1712 70%)",
           afterFill: "linear-gradient(135deg,#141414,#0B0C0E 70%)",
+          beforeImage: "projects/photoedit/edit0201.jpg",
+          afterImage: "projects/photoedit/edit0202.jpg",
         },
         {
           id: "c03",
@@ -386,6 +388,8 @@
           desc: "Recovered a flat, overcast coastline shot into a warmer golden-hour grade.",
           beforeFill: "linear-gradient(135deg,#2b2f33,#1c2024 70%)",
           afterFill: "linear-gradient(135deg,#3a2412,#160c06 70%)",
+          beforeImage: "projects/photoedit/edit0301.jpg",
+          afterImage: "projects/photoedit/edit0302.jpg",
         },
         {
           id: "c04",
@@ -395,6 +399,8 @@
           desc: "Pulled a badly underexposed indoor event frame back to a usable, natural-looking exposure.",
           beforeFill: "linear-gradient(135deg,#141414,#08080a 70%)",
           afterFill: "linear-gradient(135deg,#28221a,#141210 70%)",
+          beforeImage: "projects/photoedit/edit0401.jpg",
+          afterImage: "projects/photoedit/edit0402.jpg",
         },
       ],
     },
